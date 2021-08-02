@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 :root {
-  --line-border-fill: #3498db;
-  --line-border-empty: #f30e0e;
+  --line-border-fill: #db34cd;
+  --line-border-empty: #e0e0e0;
 }
 
 * {
@@ -10,14 +10,14 @@
 }
 
 body {
-  background-color: rgb(146, 89, 79);
-  font-family: "Courier New", Courier, monospace;
+  background-color: #0fdd31;
+  font-family: "Muli", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  margin: 0%;
+  margin: 0;
 }
 
 .container {
@@ -34,7 +34,7 @@ body {
 }
 
 .progress-container::before {
-  content: " ";
+  content: '';
   background-color: var(--line-border-empty);
   position: absolute;
   top: 50%;
@@ -54,12 +54,12 @@ body {
   height: 4px;
   width: 0%;
   z-index: -1;
-  transition: 0.5s ease;
+  transition: 0.4s ease;
 }
 
 .circle {
-  background-color: turquoise;
-  color: yellow;
+  background-color: #fff;
+  color: #999;
   border-radius: 50%;
   height: 30px;
   width: 30px;
@@ -67,14 +67,14 @@ body {
   align-items: center;
   justify-content: center;
   border: 3px solid var(--line-border-empty);
-  transition: 0.5s ease;
+  transition: 0.4s ease;
 }
 
 .circle.active {
   border-color: var(--line-border-fill);
 }
 
-.button {
+.btn {
   background-color: var(--line-border-fill);
   color: #fff;
   border: 0;
@@ -86,15 +86,15 @@ body {
   font-size: 12px;
 }
 
-.button.active {
+.btn:active {
   transform: scale(0.98);
 }
 
-.button:focus {
+.btn:focus {
   outline: 0;
 }
 
-.button:disabled {
+.btn:disabled {
   background-color: var(--line-border-empty);
   cursor: not-allowed;
 }
